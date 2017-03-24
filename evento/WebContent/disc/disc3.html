@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../disc.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css"><!-- style-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    
+    <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#000000");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgba(248, 80, 80, 0.9)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+<!-- article--> 
+<article id="content">
+<hr>
+<br>
+<div>
+    <ul>
+        <li id="bigTitle"><p>2017년 KT 더블할인 멤버십 시즌1</p></li>   
+        <li id="rowContentImg"><p><img src="../img/disc/disc_detail3.png"></p></li><br>
+        <li id="mainTitle"><span>더블할인 멤버십</span><span>혜택이란?</span></li>
+        <div>모든 고객이 원하는 날, 원하는 제휴사에서 2배 할인 혜택을 받을 수 있는 혜택입니다.</div><br>
+        <div> -더블할인 멤버쉽 제휴사 통합매달 1회</div><br>
+        <li id="mainContentTitle"><p>■ 제휴사별 평사시 혜택과 더블할인 혜택</p></li><br>
+        <li id="mainContent">-<u>대상</u><span> : 뜌레쥬르,도미노피자,롯데월드,CGV 영화관</span></li>
+        <li id="mainContent">-또한,<span>매달 하나씩 <u>문화공연</u>을 선정해 단독 최대할인</span></li><br>
+        <li id="rowContentImg"><p><img src="../img/disc/disc_detail3-1.png"></p></li><br>
+        
+
+       
+    </ul>
+    </div>
+    </article>
+     <!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

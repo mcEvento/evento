@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../even.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+     <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#272727");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgb(255, 20, 20)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+
+<!-- article--> 
+<article id="content" style="border-top:2px solid navy">
+<br>
+
+<div>
+        <li id="bigTitle"><p style="font-family:NanumBarunGothic;">구례 산수유꽃 축제 2017</p></li>   
+      <!--  <li id="mediumTitle"><p>기사입력 2017.03.22 오후 3:50</p></li>
+        <li id="mediumTitle"><p>최종수정 2017.03.27 오후 3:52</p></li>-->
+        
+      <!--  <li id="rowContentImg"><p><img src="../img/even/tulip1.JPG"></p></li>-->
+        <!-- 이미지캐러셀 -->
+        <div class="container">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="../img/even/even5_1.jpg" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="../img/even/even5_2.jpg" alt="Chania" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="../img/even/even5_3.jpg" alt="Flower" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="../img/even/even5_4.jpg" alt="Flower" width="460" height="345">
+      </div>
+      
+     
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+       <!-- 이미지캐러셀끝-->
+        
+        
+        
+        <br>
+        <table id="evenTable" >
+            <thead>
+               <tr style="height:30px; width:100%; border-bottom:2px solid navy;">
+                   <td colspan="2" style="font-size:15pt; font-weight:bold;">&nbsp;&nbsp;행사정보</td>
+               </tr>
+                <tr style="height:30px;">
+                    <td style="width:30%;">&nbsp;- 행사기간</td>
+                    <td>2017.03.18 ~ 2017.03.26</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 위치</td>
+                    <td>전라남도 구례군 산동면 상관1길 45 (산동면)</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 행사장소</td>
+                    <td>전남 구례군 지리산온천관광단지 일원</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 연락처</td>
+                    <td>061-780-2726~7</td>
+                </tr>
+                <tr style="height:30px; border-bottom:2px solid navy;">
+                    <td>&nbsp;- 홈페이지</td>
+                    <td><a href="http://sansuyu.gurye.go.kr">http://sansuyu.gurye.go.kr</a></td>
+                </tr>
+                <tr style="height:30px;">
+                    <td colspan="2"></td>
+                </tr>
+                <tr style="height:30px; width:100%; border-bottom:2px solid navy; border-top:2px solid #eee;">
+                   <td colspan="2" style="font-size:15pt; font-weight:bold;">&nbsp;&nbsp;개요</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 주최/주관</td>
+                    <td>구례군축제진위원회/ Tel. 061-780-2726~7</td>
+                </tr>
+                <tr style="border-bottom:2px solid navy;">
+                    <td>&nbsp;- 행사소개</td>
+                    <td><br>매서운 겨울 바람 속에서 올해도 노오란 산수유꽃이 지리산 자락에서 그 고운 자태를 드러내며 봄소식을 전하고 있다. <br>
+                    봄의 전령사인 산수유 꽃과 함께 약동하는 새봄의 정취를 가족과 함께 즐길 수 있는 축제가 있다. <br>
+                    매년 3월 봄에 열리는 구례 산수유 축제이다. <br>
+                    매년 산수유꽃이 필 무렵에는 지리산자락에서 고로쇠약수 또한 한창이므로 이 즈음에 국.내외 관광객을 많이 다녀가곤 한다. <br>
+                    이 축제에서는 산수유 꽃으로 만든 차, 술, 음식 등을 맛볼 수 있을 뿐 아니라 다양한 공연, 체험 행사, 불꽃 놀이 등이 펼쳐진다. <br>
+                    또 지리산 온천 관광지를 비롯해 주변 유명한 관광 명소에서 휴식을 즐길 수도 있다.<br><br>
+
+</td>
+                </tr>
+                
+                
+            </thead>            
+        </table>
+        <br>
+        <br>
+       <!-- <ul>
+        <li id="rowContentComm"><p></p></li><br>
+        <li id="rowContentTitle"><p></p></li>
+        <li id="rowContentTitle"><p></p></li><br>
+        <li id="maincontent"><p></p></li>
+        </ul>-->
+</div>
+
+</article>
+<!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

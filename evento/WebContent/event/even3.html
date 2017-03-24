@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../even.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+     <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#272727");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgb(255, 20, 20)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+
+<!-- article--> 
+<article id="content" style="border-top:2px solid navy">
+<br>
+
+<div>
+        <li id="bigTitle"><p style="font-family:NanumBarunGothic;">경포대 벚꽃축제 2017</p></li>   
+      <!--  <li id="mediumTitle"><p>기사입력 2017.03.22 오후 3:50</p></li>
+        <li id="mediumTitle"><p>최종수정 2017.03.27 오후 3:52</p></li>-->
+        
+      <!--  <li id="rowContentImg"><p><img src="../img/even/tulip1.JPG"></p></li>-->
+        <!-- 이미지캐러셀 -->
+        <div class="container">
+  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="../img/even/even3_1.png" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="../img/even/even3_2.png" alt="Chania" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="../img/even/even3_3.png" alt="Flower" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="../img/even/even3_4.png" alt="Flower" width="460" height="345">
+      </div>
+      
+     
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+       <!-- 이미지캐러셀끝-->
+        
+        
+        
+        <br>
+        <table id="evenTable" >
+            <thead>
+               <tr style="height:30px; width:100%; border-bottom:2px solid navy;">
+                   <td colspan="2" style="font-size:15pt; font-weight:bold;">&nbsp;&nbsp;행사정보</td>
+               </tr>
+                <tr style="height:30px;">
+                    <td style="width:30%;">&nbsp;- 행사기간</td>
+                    <td>2017.04.06 ~ 2017.04.12</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 위치</td>
+                    <td>강원도 강릉시 경포로 365 (저동)</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 행사장소</td>
+                    <td>강원도 강릉 경포대 일원</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 연락처</td>
+                    <td>관광과 033-640-5807</td>
+                </tr>
+                <tr style="height:30px; border-bottom:2px solid navy;">
+                    <td>&nbsp;- 홈페이지</td>
+                    <td><a href="http://www.gpfestival.kr">http://www.gpfestival.kr</a></td>
+                </tr>
+                <tr style="height:30px;">
+                    <td colspan="2"></td>
+                </tr>
+                <tr style="height:30px; width:100%; border-bottom:2px solid navy; border-top:2px solid #eee;">
+                   <td colspan="2" style="font-size:15pt; font-weight:bold;">&nbsp;&nbsp;개요</td>
+                </tr>
+                <tr style="height:30px;">
+                    <td>&nbsp;- 주최/주관</td>
+                    <td>강릉시 / Tel. 관광과 033-640-5807</td>
+                </tr>
+                <tr style="border-bottom:2px solid navy;">
+                    <td>&nbsp;- 행사소개</td>
+                    <td><br>매년 4월초 중순경 경포대 일원에서 개최되는 벚꽃축제는 우리시의 대표 축제로 자리매김하고 있으며 매년 많은 국,내외 관광객이 찾고 있다.<br>
+                     경포대(도지방유형문화재 제6호)를 중심으로 경포호수를 둘러싼 4.3㎞ 호수의 아름다움을 이어가는 봄꽃 축제 향연의 장이 펼쳐져 꽃 세상을 이루는 벚꽃 개나리 수선화등 아기자기한 작은 꽃들이 꽃 세상을 이루어준다. <br>
+                     웅장한 고목나무는 벚꽃나무가지를 늘어뜨린 채 꽃망울을 터뜨려 상춘객을 부르는 소리가 저 멀리 까지 울려 퍼지는가 하면, 경포대 진입로 3킬로미터에서부터 꽃 축제 경연 전시 등의 다양한 문화예술행사가 이어지는 꽃 세상을 이루는 축제행사가 펼쳐지고 있다.<br><br>
+
+</td>
+                </tr>
+                
+                
+            </thead>            
+        </table>
+        <br>
+        <br>
+       <!-- <ul>
+        <li id="rowContentComm"><p></p></li><br>
+        <li id="rowContentTitle"><p></p></li>
+        <li id="rowContentTitle"><p></p></li><br>
+        <li id="maincontent"><p></p></li>
+        </ul>-->
+</div>
+
+</article>
+<!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

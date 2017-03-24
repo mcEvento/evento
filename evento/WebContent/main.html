@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="style.css"><!-- style-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    
+    <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#272727");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgb(255, 20, 20)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../Evento/main.html"><img src="img/eventologo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+<!-- article--> 
+<article id="content">
+
+<div id="container">
+                <ul class="tabs">
+                    <li class="active" rel="tab1">BEST</li>
+                    <li rel="tab2">할인</li>
+                    <li rel="tab3">행사</li>
+                    <li rel="tab4">구인</li>
+                    <a href="http://shop.wowzone.co.kr/mshop/direct/direct_01.asp?cate1=35&chk=1&cg=1"><li rel="tab5">쇼핑</li></a>
+                </ul>
+           
+                <div class="tab_container">
+                <div id="tab1" class="tab_content">
+                    <ul>
+                        <li><a href="#">Rss_1</a></li>
+                        <li><a href="#">Rss_1</a></li>
+                        <li><a href="#">Rss_1</a></li>
+                        <li><a href="#">Rss_1</a></li>
+                        <li><a href="#">Rss_1</a></li>
+                    </ul>
+                </div>
+                <!-- #tab1 end-->
+                <div id="tab2" class="tab_content">
+                       <ul>
+                        <li><a href="disc/disc1.html">2017년에도 CGV에서 KT할인은 계속 된다!</a></li>
+                        <li><a href="disc/disc2.html">군인할인 정책 연장 안내</a></li>
+                        <li><a href="disc/disc3.html">2017년 KT 더블할인 멤버십 시즌1</a></li>
+                        <li><a href="disc/disc4.html">꼭 필요한 곳에서 더 커진 현대카드 혜택 150% 적립·할인</a></li>
+                        <li><a href="disc/disc5.html">영풍문고 코엑스점과 함께하는 할인 이벤트</a></li>
+                    </ul>
+                </div>
+                <!-- #tab2 end-->
+                <div id="tab3" class="tab_content">
+                       <ul>
+                        <li><a href="event/even1.html">에버랜드 튤립 축제</a></li>
+                        <li><a href="event/even2.html">제주 유채꽃 축제</a></li>
+                        <li><a href="event/even3.html">경포대 벚꽃 축제</a></li>
+                        <li><a href="event/even4.html">아침고요수목원 오색별빛정원전</a></li>
+                        <li><a href="event/even5.html">구례 산수유꽃 축제</a></li>
+                    </ul>
+                </div>
+                <!-- #tab3 end-->
+                <div id="tab4" class="tab_content">
+                       <ul>
+                        <li><a href="#">Rss_4</a></li>
+                        <li><a href="#">Rss_4</a></li>
+                        <li><a href="#">Rss_4</a></li>
+                        <li><a href="#">Rss_4</a></li>
+                        <li><a href="#">Rss_4</a></li>
+                    </ul>
+                </div>
+                <!-- #tab4 end-->
+                <div id="tab5" class="tab_content">
+                       <ul>
+                        <li><a href="#">Rss_5</a></li>
+                        <li><a href="#">Rss_5</a></li>
+                        <li><a href="#">Rss_5</a></li>
+                        <li><a href="#">Rss_5</a></li>
+                        <li><a href="#">Rss_5</a></li>
+                    </ul>
+                </div>
+                <!-- #tab5 end-->
+                </div>
+    <!-- .tab_container end-->
+</div>
+<!-- #container end-->
+
+<div id="container_1">
+    <ul>
+        <li><a href="#">음식점</a></li>
+        <li><a href="#">마트</a></li>
+        <li><a href="#">의류</a></li>
+        <li><a href="#">교육</a></li>
+        <li><a href="#">IT</a></li>
+    </ul>
+    <ul>
+        <li><a href="#">병원</a></li>
+        <li><a href="#">기술</a></li>
+        <li><a href="#">부동산</a></li>
+        <li><a href="#">운송</a></li>
+        <li><a href="#">구인</a></li>
+    </ul>
+</div>
+<!-- #container_1 end-->
+                 
+<div id="container_2">
+    <iframe id="forecast_embed" type="text/html" frameborder="0" src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=South Korea&color=#00aaff&units=si"> </iframe>
+</div>
+<!-- #container_2 end-->
+                 
+<div id="container_3"><a href="http://www.sns365.org">
+    <img src="img/logo.gif" alt="cnc뉴스 입니다." title="cnc뉴스 입니다."></a>
+</div>
+<!-- #container_2 end-->
+                  
+</article>
+<!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../disc.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css"><!-- style-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    
+    <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#000000");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgba(248, 80, 80, 0.9)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+<!-- article--> 
+<article id="content">
+<hr>
+<br>
+<div>
+    <ul>
+        <li id="bigTitle"><p>군인할인 정책 연장 안내</p></li>   
+      
+        <br>
+        <li id="rowContentImg"><p><img src="../img/disc/disc_detail2.png"></p></li><br>
+        <li id="mainContentTitle"><p>1.제휴신용카드 사용 시</p></li>
+        <hr>
+        <li id="mainContent">- 군인 할인 15% + 제휴신용카드 중복 할인</li><br>
+        <li id="mainContent"><p>*할인 전 주문 금액 10만원 한도 15% 우선 할인<br>
+                                *군인할인 15% (최대 1만5천원 할인) 적용 후 제휴 신용카드 할인결제 1회 중복가능<br>
+                                *통신사 할인 주복 불가<br>
+                                *타 쿠폰 및 타 행사 중복 불가<br><br><br>
+        <li id="mainContentTitle"><p>2.제휴신용카드 미사용 시</p></li>
+        <hr>                        
+        <li id="mainContent">- 군인 할인 25%</li><br>
+        <li id="mainContent"><p>*할인 전 주문 금액 10만원 한도 25% 할인(최대 2만5천원 할인)<br>
+                                *타 쿠폰 및 타 행사,제휴할인 중복 불가<br><br>
+                                
+                                           
+                                <div>※ 군인할인 적용 시 분할 결제 및 개별 계산 불가합니다.</div>
+                                <div>※ 군인할인 대상자 및 인증박식은 기존과 동일합니다.</div>                                
+                                <div>※ 해당 저액은 2년간 한시적으로 운영 예정입니다.</div>                                
+        </li>
+    </ul>
+    </div>
+    </article><!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

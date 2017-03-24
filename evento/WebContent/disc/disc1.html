@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../disc.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css"><!-- style-->
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    
+    <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#000000");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgba(248, 80, 80, 0.9)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+<!-- article--> 
+<article id="content" style="border-top:2px solid navy">
+<br>
+<div>
+    <ul>
+        <li id="bigTitle"><p>2017년에도 CGV에서 KT할인은 계속 된다!</p></li>   
+       
+        <br>
+        <li id="rowContentImg"><p><img src="../img/disc/disc_detail1.png"></p></li><br>
+       
+<!--        <li id="rowContentTitle"><p>"31일까지 G마켓과 클린킹 브랜드위크"</p></li><br>
+        <li id="rowContentTitle"><p></p></li><br>
+        <li id="maincontent"><p>[아시아경제 오종탁 기자] 전자랜드프라이스킹이 G마켓과 함께 클린킹 브랜드위크를 진행한다.<br><br>
+        전자랜드는 23일부터 오는 31일까지 브랜드위크 기간 G마켓에서 전자랜드 클린킹의 세탁기, 에어컨, 냉장고, 김치냉장고 청소 서비스를 20% 할인된 가격에 판매한다고 밝혔다. 
+
+       드럼형 세탁기는 기존 13만원에서 10만4000원에, 스탠드형 에어컨은 기존 12만원에서 9만6000원에, 일반형 냉장고는 기존 13만원에서 10만4000원에 서비스를 이용할 수 있다. 또 포토상품평을 작성해준 고객 중 50명을 추첨해 보조배터리를 증정한다.<br><br>
+
+       전자랜드 클린킹은 에어컨, 냉장고, 세탁기 등 고객들의 건강과 직결된 대표적인 가전제품의 세척과 살균을 제공하는 서비스다. 규격화된 높은 서비스 품질, 첨단장비, 친환경약품, 고객중심 서비스 관리를 통해 한 차원 높은 프리미엄 홈케어 서비스를 선보인다. 이달 초에는 리뉴얼을 통해 일부 도서산간 지역을 제외한 전국으로까지 서비스를 확대했다. 
+       <br><br>-->
+     <div id="maincontent">
+         <u id="contentTitle">현장할인</u><br><br>
+         <div id="rowContentTitle">1.혜택이 2배 , 더블할인 ( 월 1회 ) </div><br>
+             영화티켓 장당 4,000원 차감할인 (본인에 한함)<br>
+              -해당 월 kt 선택형멤버십 타제휴사에서 혜택 사용 시 적용 불가<br><br>
+         <div id="rowContentTitle">2.일반할인( 월 1회 )</div><br>
+             영화티켓 장당 2,000원 차감할인 (본인만 가능)<br><br>
+        <hr style="border:#7c7a7a 1px dashed"><br>
+            <div id="subContent1">&nbsp;* 8천원 이상(2D,3D,VEATBOX)티켓에 한하며,조조 중복할인 제외</div><br>
+            <div id="subContent1">&nbsp;* CGV청담씨네시티 제외</div><br><br>
+            <div id="subContent2">꿀팁! 더블할인과 일반할인은 동일일자 사용가능,buy 중복할인 불가</div>
+            
+        
+        <u id="contentTitle">온라인 할인</u><br><br>
+        <div id="rowContentTitle">1.VIP (월 1회,최대 연 12회)</div><br>      
+            2D 일반석 본인 무료 및 동반인 할인 , 동반인 할인 혜택은 일반등급 할인에 준함<br>
+            골드클래스 본인 무료(2매 예매시 50% 할인 / 35,000포인트 차감)<br><br>
+        <div id="rowContentTitle">2.Gold,Silver,White,일반(월1회,연12회,1회 2매 한정)</div><br>
+            영화티켓 8천원 초과 금액에 대해 최대 3,500원 포인트 차감할인<br><br>
+        <hr style="border:#7c7a7a 1px dashed"><br><br>
+              <div id="subContent1">&nbsp;* 온라인 할인예매는 kt멤버십 홈페이지 및 App 예매시 적용됩니다.</div>      
+
+              
+                    
+     </div>
+       
+      
+    </ul>
+    </div>
+    </article>
+    
+<!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>

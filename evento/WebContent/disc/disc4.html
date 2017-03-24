@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 모바일--> 
+    <title>Evento_Home</title>
+    <link rel="stylesheet" href="../disc.css"><!-- style-->
+    <link rel="stylesheet" href="../style.css"><!-- style-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!-- jquery CDN-->
+    
+    <script>
+    /* container tab*/
+    $(function () {
+
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+    $("ul.tabs li").click(function () {
+        $("ul.tabs li").removeClass("active").css("color", "#000000");
+        //$(this).addClass("active").css({"color": "darkred","font-weight": "bolder"});
+        $(this).addClass("active").css("color", "rgba(248, 80, 80, 0.9)");
+        $(".tab_content").hide()
+        var activeTab = $(this).attr("rel");
+        $("#" + activeTab).fadeIn()
+    });
+    });
+    /* container end*/
+        
+    /* slide nav */    
+    $(document).ready(function(){
+           $("#nav ul li").hover(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        $(document).ready(function(){
+        	$("#open").click(function(){
+        		$("#side-nav").slideToggle(400);
+                    $("#open img").toggleClass("down");
+        	});
+        });
+        $(document).ready(function(){
+           $("#side-nav ul li").click(function(){
+              $(this).find("ul").stop().fadeToggle(400);
+           });
+        });
+        
+         $(document).ready(function(){
+           $("#mysidenav ul li").click(function(){
+              $(this).find("ul").stop().slideToggle(400);
+           });
+        });
+        
+		function openNav() {
+			document.getElementById('mysidenav').style.width = '250px';
+		}
+		function closeNav() {
+			document.getElementById('mysidenav').style.width = '0';
+		}
+    /* slide nav end*/
+    </script>
+    
+
+</head>
+
+<body>
+
+<!-- header-->  
+<header id="wrap">
+           
+              <!-- sidenav -->
+              <div id="aside" title="Menu입니다.">
+                   <div id="mysidenav" class="sidenav">
+                        <span class="closebtn" onclick='closeNav()'>x</span>
+                            <ul class="nav-top">
+                                <li class="nav-right"><span>Menu <small>&#8744;</small></span>
+                                    <ul>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                        <li><a href="#">Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-right"><a href="#">Menu</a></li>
+                                <li class="nav-right"><a href="#">Menu</a></li>   
+                            </ul>
+                    </div>
+
+                    <div id="open">
+                    <span class="openmenu" onclick='openNav()'><img src="../img/nav.png" alt=""></span>
+                    </div>
+                </div>
+                
+                <!-- sidenav end-->
+                
+            <div id="main_1">
+                <div></div>     
+                <div><a href="../main.html"><img src="../img/eventoLogo.png" alt="" title="Evento_Logo입니다."></a></div>
+                <div><a href="#" target="_blank"><img src="../img/login.png" alt="로그인입니다." title="Login입니다."></a></div>
+            </div>
+            
+            <div id="search" class="search_1">
+                <form>
+                     <input id="search_1" type="text" name="search">
+                </form>   
+            </div>
+            
+</header>
+<!-- header end-->  
+
+<!-- article--> 
+<article id="content">
+<hr>
+<div id="bigTitle">꼭 필요한 곳에서 더 커진 현대카드 혜택 150% 적립·할인</div>
+<br>
+<div id="rowContentImg"><img src="../img/disc/disc_detail4.png"></div>
+<div>
+   <table id="discTable">
+      <tr>
+          <td>혜택&nbsp;&nbsp;</td>
+          <td>슈퍼클럽 제휴처에서 결제 시 업종별 기본 적립률·기본 할인율의 150% 적립·할인</td>
+      </tr>  
+      <tr>
+          <td>기간&nbsp;&nbsp;</td>
+          <td>2017.02.08 ~ 12.31</td>
+      </tr>
+        <tr>
+          <td>대상 카드&nbsp;&nbsp;</td>
+          <td>M계열카드,X계열카드 및 ZERO (M포인트 적립 및 사용 가능한 모든 현대카드 포함)</td>
+      </tr>
+      <tr>
+          <td>제휴처&nbsp;&nbsp;</td>
+          <td>이마트,G마켓,옥션,CLI,올리브영,삼성화재 다이렉트,현대해상 다이렉트,CJ오쇼핑,CJmall,위메프<br>
+              SSG.COm,현대홈쇼핑,현대Hmall,현대백화점,롯데면세점,신라면세점,배달의민족,요기요<br>
+              투썸플레이스,베스킨라빈스,던킨도너츠,일룸
+          </td>
+      </tr>
+      <tr>
+          <td>유의사항&nbsp;&nbsp;</td>
+          <td>-법인·체크·선불·Gift카드,하이브리드카드 제외<br>
+              -업종별 기본 M포인트·기본 X캐시백 적립률의 150% 또는 기본 할인율의 150%적용<br>
+               단,카드별 혜택 적용기준(당월 이용금액 등) 미달성 시 제외<br>
+              -시즌 X캐시백,시즌 스페셜 할인,세이브-오토(선지급 포인트 서비스) 이용 시 중복 적용 불가<br>
+              -제휴카드는 카드별 기본 적립 및 할인 기준에 따르며,일부 제휴점 혜택 적용불가<br>
+              -자세한 내용은 '현대카드 홈페이지 > 나만의 혜택 > 슈퍼클럽 혜택' 참고
+          </td>
+      </tr>
+   </table>
+   
+</div>
+
+</article>
+<!-- article end--> 
+      
+       
+<footer>
+           
+</footer>
+
+</body>
+</html>
